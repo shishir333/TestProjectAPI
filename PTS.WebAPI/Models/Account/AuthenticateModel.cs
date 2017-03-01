@@ -7,9 +7,9 @@ using System.Web;
 namespace PTS.WebAPI.Models.Account
 {
     /// <summary>
-    /// Request model for Login
+    /// Request model for Authentication
     /// </summary>
-    public class LoginRequestModel : IModelBase
+    public class AuthenticateRequestModel : IModelBase
     {
         /// <summary>
         /// Username
@@ -18,22 +18,16 @@ namespace PTS.WebAPI.Models.Account
         public string Login { get; set; }
 
         /// <summary>
-        /// Password
+        /// Pin
         /// </summary>
         [Required]
         public int Pin { get; set; }
-
-        /// <summary>
-        /// The facility the user is at, if blank, the user’s default facility is used
-        /// </summary>
-        [Required]
-        public string Facility { get; set; }
     }
 
     /// <summary>
-    /// Response model for Login
+    /// Response model for Authentication
     /// </summary>
-    public class LoginResponseModel : IModelBase
+    public class AuthenticateResponseModel : IModelBase
     {
         /// <summary>
         /// Username
@@ -49,10 +43,5 @@ namespace PTS.WebAPI.Models.Account
         /// API Key
         /// </summary>
         public string Key { get; set; }
-
-        /// <summary>
-        /// The facility the user was signed into
-        /// </summary>
-        public string Facility { get; set; }
     }
 }

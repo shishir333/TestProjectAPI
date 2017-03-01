@@ -147,15 +147,24 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\FacilitiesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TruckloadController.cs" />
+    <Compile Include="Controllers\PrintersController.cs" />
     <Compile Include="Controllers\WaybillsController.cs" />
     <Compile Include="Filters\ValidateModelAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account\AuthenticateModel.cs" />
     <Compile Include="Models\Account\LoginModel.cs" />
+    <Compile Include="Models\PrinterStatusResponse.cs" />
+    <Compile Include="Models\PrinterJobResponse.cs" />
+    <Compile Include="Models\TruckloadResponse.cs" />
     <Compile Include="Models\IModelBase.cs" />
+    <Compile Include="Models\FacilityResponse.cs" />
+    <Compile Include="Models\WaybillResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -187,7 +196,12 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\PTS.Business\PTS.Business.csproj">
+      <Project>{80268087-04f4-498c-a694-7f2e692fd056}</Project>
+      <Name>PTS.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

@@ -15,11 +15,25 @@ namespace PTS.WebAPI.Controllers
     /// <summary>
     /// Account related Operations
     /// </summary>
-    [RoutePrefix("pts/Account")]
+    [RoutePrefix("pts")]
     public class AccountController : ApiController
     {
         /// <summary>
-        /// Login to generate API Key for subsequent requests
+        /// Authenticate to generate API Key for subsequent requests to API
+        /// </summary>
+        /// <param name="request">Authenticate Request</param>
+        /// <returns>Authenticate Response</returns>
+        [SwaggerResponse(HttpStatusCode.OK, Type = typeof(AuthenticateResponseModel))]
+        [HttpPost]
+        [Route("Authenticate")]
+        [ValidateModel]
+        public HttpResponseMessage Authenticate(AuthenticateRequestModel request)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, new AuthenticateResponseModel());
+        }
+
+        /// <summary>
+        /// Login user
         /// </summary>
         /// <param name="request">Login Request</param>
         /// <returns>Login Response</returns>
