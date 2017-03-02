@@ -152,6 +152,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TruckloadController.cs" />
     <Compile Include="Controllers\PrintersController.cs" />
+    <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Controllers\WaybillsController.cs" />
     <Compile Include="Filters\ValidateModelAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -159,6 +160,7 @@
     </Compile>
     <Compile Include="Models\Account\AuthenticateModel.cs" />
     <Compile Include="Models\Account\LoginModel.cs" />
+    <Compile Include="Models\ItemResponse.cs" />
     <Compile Include="Models\PrinterStatusResponse.cs" />
     <Compile Include="Models\PrinterJobResponse.cs" />
     <Compile Include="Models\TruckloadResponse.cs" />
