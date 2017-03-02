@@ -78,7 +78,17 @@ namespace PTS.WebAPI.Models
                     {
                         Id = 1112223333,
                         Waybill = 1122334455,
-                        Facility = "UT1003",
+                        Facility = new Facility
+                        {
+                            FacilityId = "AZ0102",
+                            Address = new Address
+                            {
+                                AddressLine1 = "",
+                                City = "Gilbert",
+                                State = "AZ",
+                                Zip = ""
+                            }
+                        },
                         Location = "Aisle 3",
                         IsDamaged = false,
                         IsOSD = false,
@@ -88,7 +98,17 @@ namespace PTS.WebAPI.Models
                     {
                         Id = 1112223334,
                         Waybill = 1122334455,
-                        Facility = "UT1003",
+                        Facility = new Facility
+                        {
+                            FacilityId = "AZ0102",
+                            Address = new Address
+                            {
+                                AddressLine1 = "",
+                                City = "Gilbert",
+                                State = "AZ",
+                                Zip = ""
+                            }
+                        },
                         Location = "Aisle 3",
                         IsDamaged = false,
                         IsOSD = false,
@@ -98,7 +118,17 @@ namespace PTS.WebAPI.Models
                     {
                         Id = 1112223335,
                         Waybill = 1122334455,
-                        Facility = "UT1003",
+                        Facility = new Facility
+                        {
+                            FacilityId = "AZ0102",
+                            Address = new Address
+                            {
+                                AddressLine1 = "",
+                                City = "Gilbert",
+                                State = "AZ",
+                                Zip = ""
+                            }
+                        },
                         Location = "Aisle 3",
                         IsDamaged = false,
                         IsOSD = false,

@@ -32,20 +32,35 @@ namespace PTS.WebAPI.Models
 
         public bool IsActive { get; set; }
 
-        public List<Item> Items { get; set; }
+        public List<ItemResponse> Items { get; set; }
+
+        public ItemResponse()
+        {
+            
+        }
 
         public ItemResponse(bool fillDummyData, bool isWaybill)
         {
             if (!isWaybill)
             {
-                Items = new List<Item>
+                Items = new List<ItemResponse>
                 {
-                    new Item()
+                    new ItemResponse()
                     {
                         Id = 1112223333,
                         Waybill = 1122334455,
                         Truck = 1,
-                        Facility = "UT1003",
+                        Facility = new Facility
+                        {
+                            FacilityId = "AZ0102",
+                            Address = new Address
+                            {
+                                AddressLine1 = "",
+                                City = "Gilbert",
+                                State = "AZ",
+                                Zip = ""
+                            }
+                        }.FacilityId,
                         Location = "Aisle 3",
                         IsDamaged = false,
                         IsOSD = false,
@@ -60,33 +75,63 @@ namespace PTS.WebAPI.Models
 
             else if (isWaybill)
             {
-                Items = new List<Item>
+                Items = new List<ItemResponse>
                 {
-                   new Item()
+                   new ItemResponse()
                     {
                         Id = 1112223333,
                         Waybill = 1122334455,
-                        Facility = "UT1003",
+                        Facility = new Facility
+                        {
+                            FacilityId = "AZ0102",
+                            Address = new Address
+                            {
+                                AddressLine1 = "",
+                                City = "Gilbert",
+                                State = "AZ",
+                                Zip = ""
+                            }
+                        }.FacilityId,
                         Location = "Aisle 3",
                         IsDamaged = false,
                         IsOSD = false,
                         Desc = "Futura Dining room chair"
                     },
-                    new Item()
+                    new ItemResponse()
                     {
                         Id = 1112223334,
                         Waybill = 1122334455,
-                        Facility = "UT1003",
+                        Facility = new Facility
+                        {
+                            FacilityId = "AZ0102",
+                            Address = new Address
+                            {
+                                AddressLine1 = "",
+                                City = "Gilbert",
+                                State = "AZ",
+                                Zip = ""
+                            }
+                        }.FacilityId,
                         Location = "Aisle 3",
                         IsDamaged = false,
                         IsOSD = false,
                         Desc = "Futura Dining room chair"
                     },
-                    new Item()
+                    new ItemResponse()
                     {
                         Id = 1112223335,
                         Waybill = 1122334455,
-                        Facility = "UT1003",
+                        Facility = new Facility
+                        {
+                            FacilityId = "AZ0102",
+                            Address = new Address
+                            {
+                                AddressLine1 = "",
+                                City = "Gilbert",
+                                State = "AZ",
+                                Zip = ""
+                            }
+                        }.FacilityId,
                         Location = "Aisle 3",
                         IsDamaged = false,
                         IsOSD = false,
