@@ -30,8 +30,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +51,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\Event.cs">
+      <DependentUpon>Progistics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facility.cs">
+      <DependentUpon>Progistics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Item.cs">
+      <DependentUpon>Progistics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Personnel.cs">
+      <DependentUpon>Progistics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Printer.cs">
+      <DependentUpon>Progistics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\PrintJob.cs">
+      <DependentUpon>Progistics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Progistics.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Progistics.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Progistics.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Progistics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Progistics.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Progistics.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Truckload.cs">
+      <DependentUpon>Progistics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Waybill.cs">
+      <DependentUpon>Progistics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenericRepository.cs" />
+    <Compile Include="GenericUnitOfWork.cs" />
+    <Compile Include="IItemRepository.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="ItemRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="DB\Progistics.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Progistics.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\Progistics.edmx.diagram">
+      <DependentUpon>Progistics.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DB\Progistics.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Progistics.edmx</DependentUpon>
+      <LastGenOutput>Progistics.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Progistics.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Progistics.edmx</DependentUpon>
+      <LastGenOutput>Progistics.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
