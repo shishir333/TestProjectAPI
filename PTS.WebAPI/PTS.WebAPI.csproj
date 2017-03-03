@@ -160,6 +160,11 @@
     </Compile>
     <Compile Include="Models\Account\AuthenticateModel.cs" />
     <Compile Include="Models\Account\LoginModel.cs" />
+    <Compile Include="Models\Action\LoadResponse.cs" />
+    <Compile Include="Models\Action\DamageResponse.cs" />
+    <Compile Include="Models\Action\DeliveredResponse.cs" />
+    <Compile Include="Models\Action\TransferResponse.cs" />
+    <Compile Include="Models\Action\UnloadResponse.cs" />
     <Compile Include="Models\Action\OnboardResponse.cs" />
     <Compile Include="Models\Action\PreloadResponse.cs" />
     <Compile Include="Models\ClosePrintJobResponse.cs" />
