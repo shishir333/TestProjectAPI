@@ -151,8 +151,10 @@
     <Compile Include="Controllers\FacilitiesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\TruckloadController.cs" />
     <Compile Include="Controllers\PrintersController.cs" />
+    <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Controllers\WaybillsController.cs" />
     <Compile Include="Filters\ValidateModelAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -168,6 +170,8 @@
     <Compile Include="Models\Action\OnboardResponse.cs" />
     <Compile Include="Models\Action\PreloadResponse.cs" />
     <Compile Include="Models\ClosePrintJobResponse.cs" />
+    <Compile Include="Models\EventResponse.cs" />
+    <Compile Include="Models\ItemResponse.cs" />
     <Compile Include="Models\PrinterStatusResponse.cs" />
     <Compile Include="Models\PrinterJobResponse.cs" />
     <Compile Include="Models\UpdateTruckloadResponse.cs" />

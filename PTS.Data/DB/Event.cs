@@ -29,5 +29,6 @@ namespace PTS.Data.DB
         public string CreatedBy { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public string ModifiedBy { get; set; }
+        public byte[] Timestamp { get; set; }
     }
 }

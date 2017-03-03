@@ -14,7 +14,7 @@ namespace PTS.Business.Domain
 
         public int Truck { get; set; }
 
-        public string Facility { get; set; }
+        public Facility Facility { get; set; }
 
         public string Location { get; set; }
 
