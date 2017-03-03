@@ -104,5 +104,24 @@ namespace PTS.WebAPI.Controllers
         }
 
         #endregion
+
+        #region Close Print Jobs
+
+        // POST /pts/printers/job/{id} – Update the status of a single print job
+        /// <summary>
+        /// Update the status of a single print job
+        /// </summary>
+        /// <param name="id">Printer ID</param>
+        /// <param name="request">Close Printer Job Response</param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("Jobs/{id}")]
+        [SwaggerResponse(HttpStatusCode.OK, Type = typeof(ClosePrintJobResponseModel))]
+        public HttpResponseMessage ClosePrintJob(string id, ClosePrintJobRequestModel request)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, new ClosePrintJobResponseModel());
+        }
+
+        #endregion
     }
 }

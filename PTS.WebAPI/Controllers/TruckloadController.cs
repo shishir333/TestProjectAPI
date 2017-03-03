@@ -12,6 +12,8 @@ namespace PTS.WebAPI.Controllers
     [RoutePrefix("pts/Truckload")]
     public class TruckloadController : ApiController
     {
+        #region Get Truckload
+
         // GET: pts/Truckload/{id} - Get truckload info by ID
         /// <summary>
         /// Get truckload by ID
@@ -38,5 +40,25 @@ namespace PTS.WebAPI.Controllers
         {
             return Request.CreateResponse(HttpStatusCode.OK, new TruckloadResponseModel());
         }
+
+        #endregion
+
+        #region Update Truckload
+
+        // POST/pts/truckload/{id} – update truckload/batch status
+        /// <summary>
+        /// update truckload/batch status
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="batchStatus">Status = OPEN/CLOSED</param>
+        /// <returns>Truckload Status</returns>
+        [SwaggerResponse(HttpStatusCode.OK, Type = typeof(UpdateTruckloadResponseModel))]
+        [HttpPost]
+        public HttpResponseMessage UpdateTruckload(int id, string batchStatus)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, new UpdateTruckloadResponseModel());
+        }
+
+        #endregion
     }
 }

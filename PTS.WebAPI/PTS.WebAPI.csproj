@@ -147,6 +147,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActionsController.cs" />
     <Compile Include="Controllers\FacilitiesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -159,8 +160,12 @@
     </Compile>
     <Compile Include="Models\Account\AuthenticateModel.cs" />
     <Compile Include="Models\Account\LoginModel.cs" />
+    <Compile Include="Models\Action\OnboardResponse.cs" />
+    <Compile Include="Models\Action\PreloadResponse.cs" />
+    <Compile Include="Models\ClosePrintJobResponse.cs" />
     <Compile Include="Models\PrinterStatusResponse.cs" />
     <Compile Include="Models\PrinterJobResponse.cs" />
+    <Compile Include="Models\UpdateTruckloadResponse.cs" />
     <Compile Include="Models\TruckloadResponse.cs" />
     <Compile Include="Models\IModelBase.cs" />
     <Compile Include="Models\FacilityResponse.cs" />

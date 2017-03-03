@@ -16,6 +16,6 @@ namespace PTS.WebAPI.Models
 
         public List<Job> Jobs { get; set; }
 
-        public List<Status> Statuses { get; set; }
+        public List<PrinterStatus> Statuses { get; set; }
     }
 }

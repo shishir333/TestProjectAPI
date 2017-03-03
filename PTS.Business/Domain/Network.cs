@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace PTS.Business.Domain
 {
-    public class Job : IDomainBase
+    public class Network : IDomainBase
     {
         public int Id { get; set; }
 
-        public Guid UUID { get; set; }
+        public string Mode { get; set; }
 
-        public string Image { get; set; }
+        public string IP { get; set; }
+
+        public string Mask { get; set; }
+
+        public string Gateway { get; set; }
 
         public bool IsActive { get; set; }
     }
