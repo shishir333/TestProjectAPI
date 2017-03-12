@@ -13,6 +13,7 @@ namespace PTS.Data
     {
         public ItemRepository(ProgisticsEntities entities) : base(entities)
         {
+            //Adding injection
         }
 
         public string TestMethod()
